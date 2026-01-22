@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oscar Sanda · Arte Sanda — Amazonía, Cuidado y Abundancia</title>
+  <meta name="description" content="Portafolio y proyecto Territorio Chakana · Casa de Medicina Itorii. Arte amazónico, mitología de abundancia, servicio y cuidado." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,650&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0f10;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.09);
+      --txt: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --muted2: rgba(255,255,255,.55);
+      --line: rgba(255,255,255,.12);
+      --accent: #8cf0c6;   /* verde agua suave */
+      --accent2: #f6d38f;  /* dorado suave */
+      --shadow: 0 18px 50px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color:var(--txt);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 10% 15%, rgba(140,240,198,.16), transparent 55%),
+        radial-gradient(900px 700px at 80% 10%, rgba(246,211,143,.15), transparent 60%),
+        radial-gradient(1000px 900px at 60% 80%, rgba(140,170,255,.10), transparent 60%),
+        linear-gradient(180deg, #070a0b 0%, #0b0f10 45%, #070a0b 100%);
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ opacity:.92; }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 90px; }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(11,15,16,.72), rgba(11,15,16,.42));
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 240px;
+    }
+
+    .mark{
+      width:40px; height:40px;
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 35% 35%, rgba(140,240,198,.35), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(246,211,143,.28), transparent 55%),
+        rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .brand h1{
+      margin:0;
+      font-family:Fraunces, serif;
+      font-weight:650;
+      letter-spacing:.2px;
+      font-size:18px;
+      line-height:1.05;
+    }
+
+    .brand p{
+      margin:2px 0 0;
+      font-size:12.5px;
+      color:var(--muted);
+      letter-spacing:.2px;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .chip{
+      padding:9px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .chip:hover{ background: rgba(255,255,255,.07); transform: translateY(-1px); }
+
+    .langToggle{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 9px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+
+    .segBtn{
+      cursor:pointer;
+      border:0;
+      padding:7px 10px;
+      border-radius: 999px;
+      font-size:12.5px;
+      color:var(--muted);
+      background: transparent;
+    }
+    .segBtn.active{
+      background: rgba(140,240,198,.18);
+      color: var(--txt);
+      border:1px solid rgba(140,240,198,.28);
+    }
+
+    /* Hero */
+    .hero{
+      padding:46px 0 26px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .panel{
+      background: var(--panel);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+
+    .heroMain{
+      padding:26px 22px 22px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .heroMain:before{
+      content:"";
+      position:absolute;
+      inset:-40px -60px auto auto;
+      width:340px; height:340px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(246,211,143,.22), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(140,240,198,.18), transparent 60%);
+      filter: blur(1px);
+      pointer-events:none;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size:13px;
+      letter-spacing:.2px;
+    }
+
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(140,240,198,.45);
+    }
+
+    .heroTitle{
+      margin:16px 0 10px;
+      font-family:Fraunces, serif;
+      font-weight:650;
+      font-size:38px;
+      letter-spacing:.2px;
+      line-height:1.02;
+    }
+
+    .heroSub{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size:15.5px;
+      line-height:1.55;
+      max-width: 62ch;
+    }
+
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      font-size:13.5px;
+      color: var(--txt);
+      transition: transform .15s ease, background .15s ease;
+    }
+    .btn:hover{ background: rgba(255,255,255,.08); transform: translateY(-1px); }
+    .btn.primary{
+      background: rgba(140,240,198,.18);
+      border:1px solid rgba(140,240,198,.30);
+    }
+    .btn.primary:hover{
+      background: rgba(140,240,198,.23);
+    }
+
+    .heroSide{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .card{
+      padding:14px 14px 12px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+    }
+
+    .card h3{
+      margin:0 0 6px;
+      font-size:13px;
+      color: var(--muted);
+      font-weight:600;
+      letter-spacing:.2px;
+      text-transform:uppercase;
+    }
+
+    .card p{
+      margin:0;
+      font-size:14px;
+      color: var(--txt);
+      line-height:1.45;
+    }
+
+    .meta{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+
+    .meta .mini{
+      padding:10px 10px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:13px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .mini strong{
+      color: var(--txt);
+      font-weight:600;
+      display:block;
+      margin-bottom:2px;
+      font-size:13px;
+    }
+
+    /* Sections */
+    section{ padding:22px 0; }
+
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      margin: 10px 0 14px;
+    }
+
+    .sectionHead h2{
+      margin:0;
+      font-family:Fraunces, serif;
+      font-weight:650;
+      font-size:22px;
+      letter-spacing:.2px;
+    }
+
+    .sectionHead p{
+      margin:0;
+      color: var(--muted);
+      font-size:13.5px;
+      line-height:1.45;
+      max-width: 62ch;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+
+    .bio{
+      padding:18px 18px 16px;
+    }
+
+    .bio p{ margin:0 0 10px; color: var(--muted); line-height:1.7; font-size:14.5px; }
+    .bio p:last-child{ margin-bottom:0; }
+
+    .quote{
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .quote:before{
+      content:"“";
+      position:absolute;
+      top:-18px; left:12px;
+      font-family:Fraunces, serif;
+      font-size:84px;
+      color: rgba(255,255,255,.14);
+    }
+    .quote p{
+      margin:0;
+      padding-left:8px;
+      color: var(--txt);
+      font-size:14.5px;
+      line-height:1.6;
+    }
+    .quote small{
+      display:block;
+      margin-top:10px;
+      color: var(--muted);
+      font-size:13px;
+    }
+
+    /* Gallery */
+    .galleryWrap{
+      padding:18px;
+    }
+
+    .galleryTop{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:12px;
+    }
+
+    .notice{
+      color: var(--muted);
+      font-size:13px;
+      line-height:1.4;
+    }
+
+    .masonry{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+
+    .work{
+      grid-column: span 6;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height: 100%;
+    }
+
+    .work.big{ grid-column: span 12; }
+
+    .work img{
+      width:100%;
+      height: 260px;
+      object-fit:cover;
+      display:block;
+      background: rgba(255,255,255,.03);
+    }
+
+    .work.big img{ height: 340px; }
+
+    .plate{
+      padding:12px 14px 14px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+
+    .plate h3{
+      margin:0;
+      font-size:14.5px;
+      font-weight:650;
+      letter-spacing:.2px;
+    }
+
+    .plate .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:2px;
+    }
+
+    .tag{
+      font-size:12px;
+      color: rgba(255,255,255,.78);
+      padding:6px 9px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+    }
+
+    .plate p{
+      margin:4px 0 0;
+      color: var(--muted);
+      line-height:1.6;
+      font-size:13.6px;
+    }
+
+    .plate .metaLine{
+      margin-top:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      color: var(--muted2);
+      font-size:12.5px;
+      border-top:1px solid rgba(255,255,255,.10);
+      padding-top:10px;
+    }
+
+    .footer{
+      margin-top:26px;
+      padding:18px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .footLeft{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      color: var(--muted);
+      font-size:13px;
+    }
+
+    .socialRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .iconBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      font-size:13px;
+      color: var(--txt);
+    }
+
+    .ico{
+      width:16px; height:16px;
+      display:inline-block;
+      opacity:.92;
+    }
+
+    /* Language helpers */
+    [data-lang]{ display:none; }
+    body.lang-es [data-lang="es"]{ display:block; }
+    body.lang-en [data-lang="en"]{ display:block; }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{ grid-template-columns: 1fr; }
+      .meta{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px){
+      .masonry{ grid-template-columns: repeat(6, 1fr); }
+      .work{ grid-column: span 6; }
+      .work.big{ grid-column: span 6; }
+      .work img{ height: 220px; }
+      .work.big img{ height: 240px; }
+      .sectionHead{ flex-direction:column; align-items:flex-start; }
+      .heroTitle{ font-size:32px; }
+    }
+  </style>
+</head>
+
+<body class="lang-es">
+<header>
+  <div class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <h1>Oscar Sanda · Arte Sanda</h1>
+        <p data-lang="es">Mitología de abundancia amazónica · servicio, cuidado y memoria</p>
+        <p data-lang="en">Amazonian mythology of abundance · service, care, and memory</p>
+      </div>
+    </div>
+
+    <nav>
+      <a class="chip" href="#chakana">
+        <span class="dot" aria-hidden="true"></span>
+        <span data-lang="es">Territorio Chakana</span>
+        <span data-lang="en">Territorio Chakana</span>
+      </a>
+      <a class="chip" href="#bio">
+        <span data-lang="es">Biografía</span>
+        <span data-lang="en">Biography</span>
+      </a>
+      <a class="chip" href="#contacto">
+        <span data-lang="es">Contacto</span>
+        <span data-lang="en">Contact</span>
+      </a>
+
+      <div class="langToggle" role="group" aria-label="Selector de idioma / Language selector">
+        <button class="segBtn active" id="btnES" type="button">ES</button>
+        <button class="segBtn" id="btnEN" type="button">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="panel heroMain">
+      <div class="kicker">
+        <span class="dot" aria-hidden="true"></span>
+        <span data-lang="es">Arte amazónico contemporáneo · raíz Kichwa · Putumayo</span>
+        <span data-lang="en">Contemporary Amazonian art · Kichwa roots · Putumayo</span>
+      </div>
+
+      <h2 class="heroTitle" data-lang="es">Pintar para cuidar: la selva como memoria viva</h2>
+      <h2 class="heroTitle" data-lang="en">Painting to care: the jungle as living memory</h2>
+
+      <p class="heroSub" data-lang="es">
+        Oscar Sanda es un artista empírico de la Amazonía colombiana cuya obra une naturaleza, espiritualidad,
+        comunidad y resiliencia. Sus murales y lienzos narran la abundancia —no como exceso— sino como
+        <strong>equilibrio, alimento y cuidado</strong>.
+      </p>
+      <p class="heroSub" data-lang="en">
+        Oscar Sanda is a self-taught artist from the Colombian Amazon. His work connects nature, spirituality,
+        community and resilience. His murals and paintings speak of abundance —not as excess— but as
+        <strong>balance, nourishment and care</strong>.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="#chakana">
+          <span data-lang="es">Ver historia de obras en Chakana</span>
+          <span data-lang="en">See the Chakana works story</span>
+        </a>
+
+        <a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/sandagram_/">
+          <span>Instagram · @sandagram_</span>
+        </a>
+
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/573235872174">
+          <span data-lang="es">WhatsApp · +57 323 587 2174</span>
+          <span data-lang="en">WhatsApp · +57 323 587 2174</span>
+        </a>
+
+        <a class="btn" href="mailto:Casaartesanda@gmail.com">
+          <span data-lang="es">Correo · Casaartesanda@gmail.com</span>
+          <span data-lang="en">Email · Casaartesanda@gmail.com</span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="panel heroSide">
+      <div class="card">
+        <h3 data-lang="es">Enfoque artístico</h3>
+        <h3 data-lang="en">Artistic focus</h3>
+
+        <p data-lang="es">
+          Mitología de abundancia amazónica, medicina y territorio, animales de poder, tejido social,
+          y estética viva del Putumayo.
+        </p>
+        <p data-lang="en">
+          Amazonian mythology of abundance, medicine and territory, power animals, social fabric,
+          and the living aesthetics of Putumayo.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 data-lang="es">Proyecto destacado</h3>
+        <h3 data-lang="en">Featured project</h3>
+
+        <p data-lang="es">
+          <strong>Territorio Chakana · Casa de Medicina Itorii</strong><br>
+          Una narrativa visual por espacios: bienvenida, templo, baños, descanso, altar y comunidad.
+        </p>
+        <p data-lang="en">
+          <strong>Territorio Chakana · Itorii Medicine House</strong><br>
+          A visual narrative by spaces: welcome, temple, bathrooms, rest, altar and community.
+        </p>
+      </div>
+
+      <div class="meta">
+        <div class="mini">
+          <div class="dot" aria-hidden="true" style="margin-top:3px;"></div>
+          <div>
+            <strong data-lang="es">Podcast (Spotify)</strong>
+            <strong data-lang="en">Podcast (Spotify)</strong>
+            <div style="margin-top:6px; display:flex; flex-direction:column; gap:6px;">
+              <a class="chip" target="_blank" rel="noopener" href="https://open.spotify.com/episode/7xmKZQtgOJ8zy6OH4SHLfa">Episodio 1</a>
+              <a class="chip" target="_blank" rel="noopener" href="https://open.spotify.com/episode/1e5rLKYIKnX8ze3JyFdMCU">Episodio 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <div class="dot" aria-hidden="true" style="margin-top:3px; background: var(--accent2); box-shadow:0 0 18px rgba(246,211,143,.35);"></div>
+          <div>
+            <strong data-lang="es">Obras de Chakana</strong>
+            <strong data-lang="en">Chakana artworks</strong>
+            <div style="margin-top:6px;">
+              <a class="chip" target="_blank" rel="noopener" href="https://drive.google.com/drive/u/2/folders/1iinaX7j5VNd8M3t4WS1fD8LBtlifsS-m">
+                <span data-lang="es">Abrir carpeta en Drive</span>
+                <span data-lang="en">Open Drive folder</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- BIO -->
+  <section id="bio">
+    <div class="sectionHead">
+      <div>
+        <h2 data-lang="es">Biografía</h2>
+        <h2 data-lang="en">Biography</h2>
+        <p data-lang="es">Una historia de territorio, resiliencia y creación al servicio de la vida.</p>
+        <p data-lang="en">A story of territory, resilience and creation in service of life.</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel bio">
+        <p data-lang="es">
+          Oscar Sanda es un artista amazónico de raíz indígena Kichwa, profundamente ligado al Putumayo.
+          Antes de ser reconocido por sus murales y lienzos, fue maestro rural: un rol de cuidado y liderazgo comunitario.
+        </p>
+        <p data-lang="es">
+          Su camino artístico nace en un contexto exigente: el desplazamiento y el exilio urbano lo llevan a aprender a pintar
+          de forma empírica, con disciplina y una memoria visceral del territorio. En sus obras, la selva aparece como madre:
+          un sistema de abundancia que enseña equilibrio, reciprocidad y respeto.
+        </p>
+        <p data-lang="es">
+          Hoy su trabajo se reconoce por una estética vibrante y simbólica que integra animales de poder, plantas maestras,
+          mitología amazónica y narrativas de sanación. Su arte no sólo decora: <strong>reconstruye tejido social</strong> y propone
+          una forma de mirar el mundo desde el cuidado.
+        </p>
+
+        <p data-lang="en">
+          Oscar Sanda is an Amazonian artist with Kichwa Indigenous roots, deeply connected to Putumayo.
+          Before gaining recognition for his murals and paintings, he worked as a rural teacher — a role centered on care and community leadership.
+        </p>
+        <p data-lang="en">
+          His artistic path began under demanding circumstances: displacement and urban exile pushed him to learn painting empirically,
+          through discipline and a visceral memory of his territory. In his work, the jungle appears as a mother:
+          a system of abundance that teaches balance, reciprocity and respect.
+        </p>
+        <p data-lang="en">
+          Today his work is known for a vibrant, symbolic aesthetic that blends power animals, master plants,
+          Amazonian mythology and narratives of healing. His art doesn’t just decorate: it <strong>rebuilds social fabric</strong>
+          and invites a worldview grounded in care.
+        </p>
+      </div>
+
+      <div class="panel quote">
+        <p data-lang="es">
+          La abundancia no es acumular: es sostener vida. Es alimento en todos los planos — lo que vemos, lo que escuchamos,
+          lo que sentimos y lo que compartimos.
+        </p>
+        <p data-lang="en">
+          Abundance is not accumulation: it is sustaining life. It is nourishment on every level — what we see, what we hear,
+          what we feel and what we share.
+        </p>
+        <small data-lang="es">— Línea curatorial inspirada en la obra y el territorio</small>
+        <small data-lang="en">— Curatorial line inspired by the work and the territory</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAKANA PROJECT -->
+  <section id="chakana">
+    <div class="sectionHead">
+      <div>
+        <h2 data-lang="es">Territorio Chakana · Casa de Medicina Itorii</h2>
+        <h2 data-lang="en">Territorio Chakana · Itorii Medicine House</h2>
+        <p data-lang="es">
+          Una historia en imágenes por espacios. Cada obra funciona como “placa”: intención, símbolo y energía del lugar.
+        </p>
+        <p data-lang="en">
+          A visual story by spaces. Each work acts like a “museum plaque”: intention, symbol and the energy of the place.
+        </p>
+      </div>
+    </div>
+
+    <div class="panel galleryWrap">
+      <div class="galleryTop">
+        <div class="notice" data-lang="es">
+          <strong>Importante:</strong> Para que las imágenes se vean en CodePen, reemplaza los <code>src</code> por URLs públicas
+          (Drive público / hosting). Puedes abrir la carpeta completa aquí.
+        </div>
+        <div class="notice" data-lang="en">
+          <strong>Note:</strong> For images to display on CodePen, replace <code>src</code> with public URLs
+          (public Drive / hosting). You can open the full folder here.
+        </div>
+
+        <a class="btn" target="_blank" rel="noopener" href="https://drive.google.com/drive/u/2/folders/1iinaX7j5VNd8M3t4WS1fD8LBtlifsS-m">
+          <span data-lang="es">Abrir carpeta de obras (Drive)</span>
+          <span data-lang="en">Open artworks folder (Drive)</span>
+        </a>
+      </div>
+
+      <!--
+        Guía rápida para Google Drive (si la imagen está pública):
+        1) Abre la imagen en Drive.
+        2) Copia el ID del archivo (parte larga en la URL).
+        3) Usa: https://drive.google.com/uc?export=view&id=FILE_ID
+      -->
+
+      <div class="masonry">
+        <!-- HERO WORK (big) -->
+        <article class="work big">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20Altar%20principal%20-%20Guardiana%20del%20Yage%20Itorii%20-%20Animales%20de%20poder%20-%20corredores%20Jornadas%20de%20paz%20y%20dignidad%20-%20cuidado%20-%20guia%20-%20proteccion.jpeg?raw=true" alt="Obra principal · Altar" />
+          <div class="plate">
+            <h3 data-lang="es">Guardian</h3>
+            <h3 data-lang="en">Main Altar · Guardian of Yagé</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">cuidado</span><span class="tag" data-lang="en">care</span>
+              <span class="tag" data-lang="es">guía</span><span class="tag" data-lang="en">guidance</span>
+              <span class="tag" data-lang="es">protección</span><span class="tag" data-lang="en">protection</span>
+            </div>
+            <p data-lang="es">
+              Obra-núcleo del recorrido: una presencia que custodia el espacio ceremonial y sostiene la intención de la medicina.
+              Los animales de poder acompañan como señales de orientación y fortaleza. El altar no es un objeto: es un acuerdo con la vida.
+            </p>
+            <p data-lang="en">
+              The core of the journey: a presence that guards the ceremonial space and holds the intention of the medicine.
+              Power animals appear as signs of guidance and strength. The altar is not an object: it is a pact with life.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Serie: Itorii · Territorio Chakana</span>
+              <span data-lang="en">Series: Itorii · Territorio Chakana</span>
+              <span data-lang="es">Placa · lectura simbólica</span>
+              <span data-lang="en">Plaque · symbolic reading</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- WORKS (replace src with your real artwork URLs) -->
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/11c1b542bdf0aaa0a89f10135859f290109ffbf2/imgs/Obra%20-%20Ingreso%20a%20templo%20-%20Chakana%20-%20Equilibrio%20-%20Duallidad%20-%20Orden%20-%20Espejo%20-%20Unidad.jpeg?raw=true" alt="Ingreso a templo" />
+          <div class="plate">
+            <h3 data-lang="es">Ingreso al Templo · Chakana</h3>
+            <h3 data-lang="en">Temple Entrance · Chakana</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">equilibrio</span><span class="tag" data-lang="en">balance</span>
+              <span class="tag" data-lang="es">dualidad</span><span class="tag" data-lang="en">duality</span>
+              <span class="tag" data-lang="es">unidad</span><span class="tag" data-lang="en">unity</span>
+            </div>
+            <p data-lang="es">
+              La Chakana como brújula: ordena el tránsito hacia adentro y recuerda que toda transformación requiere equilibrio.
+              Aquí el símbolo funciona como “puerta” y como espejo: lo que buscas afuera se revela dentro.
+            </p>
+            <p data-lang="en">
+              The Chakana as a compass: it orders the passage inward and reminds us that transformation requires balance.
+              Here the symbol acts as both “doorway” and mirror: what you seek outside is revealed within.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Espacio: Umbral</span><span data-lang="en">Space: Threshold</span>
+              <span data-lang="es">Tono: ceremonial</span><span data-lang="en">Tone: ceremonial</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://raw.githubusercontent.com/andres-ave/sanda/refs/heads/main/imgs/Obra%20-%20Interior%20del%20Templo%20Itorii%20-%20Pareja%20-%20Suen%CC%83os%20-%20Proyecto%20de%20vida%20-%20Camino%20-%20Espejo%20-%20Unidad.jpeg" alt="Interior del templo" />
+          <div class="plate">
+            <h3 data-lang="es">Interior del Templo · Sueños y Camino</h3>
+            <h3 data-lang="en">Temple Interior · Dreams and Path</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">proyecto de vida</span><span class="tag" data-lang="en">life project</span>
+              <span class="tag" data-lang="es">espejo</span><span class="tag" data-lang="en">mirror</span>
+              <span class="tag" data-lang="es">unidad</span><span class="tag" data-lang="en">unity</span>
+            </div>
+            <p data-lang="es">
+              Una escena de acompañamiento: la vida como camino compartido y la visión como destino.
+              No se trata de “llegar” sino de sostener la intención y caminar con conciencia.
+            </p>
+            <p data-lang="en">
+              A scene of companionship: life as a shared path and vision as a destination.
+              It is not about “arriving” but about holding intention and walking with awareness.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Espacio: Centro</span><span data-lang="en">Space: Center</span>
+              <span data-lang="es">Clave: introspección</span><span data-lang="en">Key: introspection</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20Zona%20de%20descanso%20-%20Abuelos%20-%20Sabiduria%20-%20Dulzura%20-%20Orden%20-%20Respeto%20-%20Agradecimiento.jpeg?raw=true" alt="Zona de descanso - abuelos" />
+          <div class="plate">
+            <h3 data-lang="es">Zona de Descanso · Abuelos</h3>
+            <h3 data-lang="en">Rest Area · Elders</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">sabiduría</span><span class="tag" data-lang="en">wisdom</span>
+              <span class="tag" data-lang="es">respeto</span><span class="tag" data-lang="en">respect</span>
+              <span class="tag" data-lang="es">gratitud</span><span class="tag" data-lang="en">gratitude</span>
+            </div>
+            <p data-lang="es">
+              Los abuelos como memoria viva: el linaje sostiene, enseña y abriga. Esta obra instala tranquilidad
+              y un sentido de hogar: una pausa para escuchar lo que el cuerpo y el corazón ya saben.
+            </p>
+            <p data-lang="en">
+              Elders as living memory: lineage holds, teaches and shelters. This work installs calm
+              and a sense of home: a pause to hear what body and heart already know.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Espacio: reposo</span><span data-lang="en">Space: rest</span>
+              <span data-lang="es">Función: contención</span><span data-lang="en">Function: holding</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20Zona%20de%20descanso%20-%20Bebe%20-%20Vida%20-%20Nacimiento%20-%20Creacio%CC%81n%20-%20Cuidado.jpeg?raw=true" alt="Zona de descanso - bebé" />
+          <div class="plate">
+            <h3 data-lang="es">Zona de Descanso · Nacimiento</h3>
+            <h3 data-lang="en">Rest Area · Birth</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">vida</span><span class="tag" data-lang="en">life</span>
+              <span class="tag" data-lang="es">creación</span><span class="tag" data-lang="en">creation</span>
+              <span class="tag" data-lang="es">cuidado</span><span class="tag" data-lang="en">care</span>
+            </div>
+            <p data-lang="es">
+              La vida recién llegada como símbolo de futuro: cuidado, ternura y responsabilidad.
+              La imagen propone un “sí” a la existencia y una invitación a proteger lo sagrado en lo cotidiano.
+            </p>
+            <p data-lang="en">
+              New life as a symbol of future: care, tenderness and responsibility.
+              The image offers a “yes” to existence and an invitation to protect what is sacred in everyday life.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Clave: origen</span><span data-lang="en">Key: origin</span>
+              <span data-lang="es">Energía: suave</span><span data-lang="en">Energy: gentle</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20Interior%20del%20templo%20Itorii%20-%20Dulzura%20-%20Alimento%20-%20Germinacion%20-%20Multiplicador%20de%20vida.jpeg?raw=true" alt="Interior del templo - florecimiento" />
+          <div class="plate">
+            <h3 data-lang="es">Interior del Templo · Florecimiento</h3>
+            <h3 data-lang="en">Temple Interior · Blooming</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">naturaleza</span><span class="tag" data-lang="en">nature</span>
+              <span class="tag" data-lang="es">belleza</span><span class="tag" data-lang="en">beauty</span>
+              <span class="tag" data-lang="es">vida</span><span class="tag" data-lang="en">life</span>
+            </div>
+            <p data-lang="es">
+              Una selva interior: el florecimiento como señal de armonía. Aquí la belleza no es ornamento,
+              es una forma de medicina: recordatorio de que todo puede reverdecer.
+            </p>
+            <p data-lang="en">
+              An inner jungle: blooming as a sign of harmony. Here beauty is not ornament,
+              it is a form of medicine: a reminder that everything can green again.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Tono: luminoso</span><span data-lang="en">Tone: luminous</span>
+              <span data-lang="es">Mensaje: renacer</span><span data-lang="en">Message: renewal</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20Ban%CC%83o%204%20-%20Abundancia%20-%20Naturaleza%20-%20Belleza%20-%20Almento%20.jpeg?raw=true" alt="Alimento - germinación" />
+          <div class="plate">
+            <h3 data-lang="es">Alimento · Germinación</h3>
+            <h3 data-lang="en">Nourishment · Germination</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">alimento</span><span class="tag" data-lang="en">nourishment</span>
+              <span class="tag" data-lang="es">multiplicador de vida</span><span class="tag" data-lang="en">life multiplier</span>
+            </div>
+            <p data-lang="es">
+              Alimento en todos los planos: lo que comemos, lo que miramos, lo que escuchamos, lo que pensamos.
+              Semilla y cuidado: de allí nace la abundancia real.
+            </p>
+            <p data-lang="en">
+              Nourishment on every level: what we eat, what we see, what we hear, what we think.
+              Seed and care: from there, true abundance is born.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Espacio: cocina/comedor</span><span data-lang="en">Space: kitchen/dining</span>
+              <span data-lang="es">Clave: gratitud</span><span data-lang="en">Key: gratitude</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20Zona%20de%20descanso%20-%20Yage%CC%81%20-%20Medicina%20-%20Sagrado%20-%20Transformacion%20-%20Sabiduri%CC%81a%20-%20Guia%20-%20Cuidado.jpeg?raw=true" alt="Zona de descanso - yagé" />
+          <div class="plate">
+            <h3 data-lang="es">Zona de Descanso · Yagé</h3>
+            <h3 data-lang="en">Rest Area · Yagé</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">medicina</span><span class="tag" data-lang="en">medicine</span>
+              <span class="tag" data-lang="es">sabiduría</span><span class="tag" data-lang="en">wisdom</span>
+              <span class="tag" data-lang="es">guía</span><span class="tag" data-lang="en">guidance</span>
+            </div>
+            <p data-lang="es">
+              Medicina como camino de claridad: la obra acompaña el reposo sin imponerse.
+              Un lenguaje sutil para integrar lo vivido y recuperar centro.
+            </p>
+            <p data-lang="en">
+              Medicine as a path of clarity: the piece accompanies rest without imposing.
+              A subtle language to integrate what was lived and return to center.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Tono: íntimo</span><span data-lang="en">Tone: intimate</span>
+              <span data-lang="es">Función: integrar</span><span data-lang="en">Function: integrate</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <img src="https://github.com/andres-ave/sanda/blob/main/imgs/Obra%20-%20zona%20de%20descanso%20abuelos%20-%20Comunidad%20-%20Templo%20-%20Hogar%20-%20Confianza%20-%20Hoguera.jpeg?raw=true" alt="Comunidad y hoguera" />
+          <div class="plate">
+            <h3 data-lang="es">Comunidad · Hoguera</h3>
+            <h3 data-lang="en">Community · Hearth</h3>
+            <div class="tags">
+              <span class="tag" data-lang="es">confianza</span><span class="tag" data-lang="en">trust</span>
+              <span class="tag" data-lang="es">hogar</span><span class="tag" data-lang="en">home</span>
+              <span class="tag" data-lang="es">tribu</span><span class="tag" data-lang="en">tribe</span>
+            </div>
+            <p data-lang="es">
+              Una imagen para recordar que la tribu es contención: nos reunimos para sostener la palabra,
+              cuidar el fuego y mirar la vida con más humanidad.
+            </p>
+            <p data-lang="en">
+              A reminder that the tribe is holding: we gather to hold the word,
+              care for the fire and see life with more humanity.
+            </p>
+            <div class="metaLine">
+              <span data-lang="es">Espacio: descanso/comunidad</span><span data-lang="en">Space: rest/community</span>
+              <span data-lang="es">Clave: encuentro</span><span data-lang="en">Key: gathering</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto">
+    <div class="sectionHead">
+      <div>
+        <h2 data-lang="es">Contacto y redes</h2>
+        <h2 data-lang="en">Contact & social</h2>
+        <p data-lang="es">Para murales, obras personalizadas y colaboraciones culturales.</p>
+        <p data-lang="en">For murals, commissions and cultural collaborations.</p>
+      </div>
+    </div>
+
+    <div class="panel footer">
+      <div class="footLeft">
+        <div><strong data-lang="es">Arte Sanda · Oscar Sanda</strong><strong data-lang="en">Arte Sanda · Oscar Sanda</strong></div>
+        <div data-lang="es">Amazonía · Putumayo · Colombia</div>
+        <div data-lang="en">Amazon · Putumayo · Colombia</div>
+      </div>
+
+      <div class="socialRow">
+        <a class="iconBtn" target="_blank" rel="noopener" href="https://www.instagram.com/sandagram_/">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          Instagram
+        </a>
+
+        <a class="iconBtn" target="_blank" rel="noopener" href="https://wa.me/573235872174">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 11.5a8 8 0 0 1-12.9 6.2L4 18l.4-3.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9.5 9.5c.4-1 1-1.2 1.4-1.2.4 0 .8.1 1 .6l.6 1.3c.1.2.1.5 0 .7l-.4.6c-.1.2-.2.4 0 .7.2.4.8 1.3 1.8 2.1.9.7 1.7 1 2.1 1.1.3.1.5 0 .7-.1l.7-.7c.2-.2.4-.2.7-.1l1.4.7c.4.2.6.6.5 1-.1.7-.7 1.4-1.5 1.7-.7.3-1.6.2-2.8-.2-1.3-.4-2.7-1.3-4-2.6-1.3-1.3-2.2-2.7-2.6-4-.4-1.2-.5-2.1-.2-2.8Z" fill="currentColor" opacity=".9"/>
+          </svg>
+          WhatsApp · +57 323 587 2174
+        </a>
+
+        <a class="iconBtn" href="mailto:Casaartesanda@gmail.com">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.6" />
+            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          Casaartesanda@gmail.com
+        </a>
+
+        <a class="iconBtn" target="_blank" rel="noopener" href="https://open.spotify.com/episode/7xmKZQtgOJ8zy6OH4SHLfa">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M8 10.2c3.6-1 6.9-.6 9.9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M8.7 13c2.8-.7 5.3-.4 7.6.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".95"/>
+            <path d="M9.5 15.5c2-.4 3.7-.2 5.2.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+          </svg>
+          Spotify (Ep. 1)
+        </a>
+
+        <a class="iconBtn" target="_blank" rel="noopener" href="https://open.spotify.com/episode/1e5rLKYIKnX8ze3JyFdMCU">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M8 10.2c3.6-1 6.9-.6 9.9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M8.7 13c2.8-.7 5.3-.4 7.6.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".95"/>
+            <path d="M9.5 15.5c2-.4 3.7-.2 5.2.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+          </svg>
+          Spotify (Ep. 2)
+        </a>
+
+        <a class="iconBtn" target="_blank" rel="noopener" href="https://drive.google.com/drive/u/2/folders/1iinaX7j5VNd8M3t4WS1fD8LBtlifsS-m">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+          Drive · Obras Chakana
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice" style="max-width:var(--max); margin: 18px auto 0; color: rgba(255,255,255,.55); font-size:12.5px; line-height:1.5;">
+    <div data-lang="es">
+      Consejo: cuando ya tengas las imágenes públicas, reemplaza los <code>src</code> de la galería por tus URLs reales.
+      Si quieres, te ayudo a convertir cada imagen de Drive en enlace directo para que quede perfecto.
+    </div>
+    <div data-lang="en">
+      Tip: once your images are public, replace the gallery <code>src</code> with your real URLs.
+      If you want, I can help you convert each Drive image into a direct link so everything looks perfect.
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Language toggle
+  const btnES = document.getElementById('btnES');
+  const btnEN = document.getElementById('btnEN');
+
+  function setLang(lang){
+    document.body.classList.remove('lang-es','lang-en');
+    document.body.classList.add(lang === 'en' ? 'lang-en' : 'lang-es');
+    btnES.classList.toggle('active', lang !== 'en');
+    btnEN.classList.toggle('active', lang === 'en');
+    localStorage.setItem('sanda_lang', lang);
+    document.documentElement.lang = (lang === 'en') ? 'en' : 'es';
+  }
+
+  btnES.addEventListener('click', () => setLang('es'));
+  btnEN.addEventListener('click', () => setLang('en'));
+
+  const saved = localStorage.getItem('sanda_lang');
+  if(saved) setLang(saved);
+</script>
+</body>
+</html>
